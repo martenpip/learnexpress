@@ -1,0 +1,16 @@
+{% extends 'partials/layout.njk' %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+    <h1>Hello Express!!! Hello {{name}} you are {{age}} old!</h1>
+   
+    <ul>
+        {% for i in range(0, 10) %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/test" method="POST">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="number" name="age" placeholder="Your age">
+        <input type="submit">
+    </form>
+{% endblock %}

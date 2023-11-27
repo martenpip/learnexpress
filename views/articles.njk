@@ -1,0 +1,9 @@
+{% extends 'partials/layout.njk' %}
+{% block title %}Articles{% endblock %}
+{% block content %}
+    <h1>Articles</h1>
+    {% for article in articles %}
+        <h1>{{article.title}}</h1>
+        <p>{{article.content}}</p>
+    {% endfor %}
+{% endblock %}
